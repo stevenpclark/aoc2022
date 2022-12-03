@@ -10,7 +10,7 @@ def get_shared_char(s):
     n = len(s)
     s1 = s[:n//2]
     s2 = s[n//2:]
-    return set(s1).intersection(set(s2)).pop()
+    return (set(s1) & (set(s2))).pop()
 
 def get_priority(c):
     if 'a' <= c <= 'z':
@@ -23,7 +23,7 @@ def score_bag(s):
     return get_priority(get_shared_char(s))
 
 def get_badge(s1, s2, s3):
-    return set(s1).intersection(set(s2)).intersection(set(s3)).pop()
+    return (set(s1) & set(s2) & set(s3)).pop()
 
 def get_badge_score(group):
     return get_priority(get_badge(*group))
