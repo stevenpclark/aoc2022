@@ -57,7 +57,6 @@ def main():
                         curr_dir.children_map[fn] = File(fn, int(a))
 
     all_sizes = [d.get_size() for d in all_dirs]
-    total_used = sum(all_sizes)
 
     puzzle.answer_a = sum(sz for sz in all_sizes if sz <= 100000)
 
