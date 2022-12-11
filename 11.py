@@ -60,14 +60,9 @@ def run_sim(chunks, num_rounds, reduce_worry):
                     worry = worry % shared_divisor
                 monkeys[dest].items.append(worry)
 
-        num_inspections = sorted([m.num_inspections for m in monkeys])
-        #print(num_inspections)
-
     num_inspections = sorted([m.num_inspections for m in monkeys])
 
     return num_inspections[-1]*num_inspections[-2]
-
-
 
 
 def main():
